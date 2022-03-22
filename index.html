@@ -16,9 +16,9 @@
         <div class="header">
             <input id="menuButton" type="image" src="media/menu_add.svg">
             <a href="https://safutitano.com">
-                <div class="logo">
+                <!-- <div class="logo">
                     <img src="media/logo_text.png" class="logo_text">
-                </div>
+                </div> -->
             </a>
             <div class="wallet">                
                 <div id="prepare">
@@ -33,19 +33,32 @@
                   </div>
             </div>
         </div>
-        <div class="wrap_content">
-            <div id="sidebar" class="glass">
-                <ul id="pageList">
+        <!-- <div class="wrap_content">
+            <div id="sidebar" class="glass"> -->
+                <!-- <ul id="pageList">
                     <li><a href="https://safutitano.com" class="contentLink"><img src="media/home.png" class="blacktoblue">Home</a></li>
                     <li><a id="dashboard" class="contentLink selected"><img src="media/lock.png" class="blacktoblue">Dashboard</a></li>
                     <li><a id="account" class="contentLink"><img src="media/account.png" class="blacktoblue">Account</a></li>
                     <li><a id="calculator" class="contentLink"><img src="media/calculator.png" class="blacktoblue">Calculator</a></li>
-                    <li><a href="https://app.bogged.finance/bsc/swap?tokenIn=BNB&tokenOut=0x84952dd90cdc57170b13d2291a8afcedc8f97c71" class="contentLink"><img src="media/swap.png" class="blacktoblue">Swap</a></li>
-                    <li><a href="https://safutitano.gitbook.io/safu-titano/" class="contentLink"><img src="media/whitepaper.png" class="blacktoblue">Whitepaper</a></li>
-                </ul>  
+                    <!-- <li><a href="https://app.bogged.finance/bsc/swap?tokenIn=BNB&tokenOut=0x84952dd90cdc57170b13d2291a8afcedc8f97c71" class="contentLink"><img src="media/swap.png" class="blacktoblue">Swap</a></li>
+                    <li><a href="https://safutitano.gitbook.io/safu-titano/" class="contentLink"><img src="media/whitepaper.png" class="blacktoblue">Whitepaper</a></li> -->
+                <!-- </ul>   -->
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+                    <a id="dashboard" class="contentLink selected"><img src="media/lock.png" class="blacktoblue">Dashboard</a>
+                    <a id="account" class="contentLink"><img src="media/account.png" class="blacktoblue">Account</a>
+                    <a id="calculator" class="contentLink"><img src="media/calculator.png" class="blacktoblue">Calculator</a>
+
+                  </div>
+                  
+                  <div id="main">
+                    <button class="openbtn" onclick="openNav()">Sidebar</button>  
+                  
+                    
+                  </div>
             </div>
             <div class="content">
-                <div class="dashboard">
+                <div class="dashboard"> 
                     <div class="group glass">
                         <div class="dashboard_row">
                             <div class="entry">
@@ -219,7 +232,17 @@
 <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.5/dist/index.js"></script>
 <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
 <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
-
+<script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
 <script src="js/dapp.js" type="module"></script>
 <script src="js/sidebar.js" type="module"></script>
 <script src="js/range-input.js"></script>
