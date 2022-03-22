@@ -3,11 +3,11 @@ var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 //import data from "../data.json" assert { type: "json" };
 
 const json_dati = '[{"tokenAddress": "0x84952dd90cdc57170b13d2291a8afcedc8f97c71","decimals" : 5,"reward" : 0.00023619273,"utcTime": "1 Jan 2022 00:00:00 UTC","apiKey": "CQMXE3Z94YNSY2HMF6IJVTVWMW5Z9DCH9A"}]';
-// const firePitAddress = '0xaA32C984AfDfa6B95e88B8aB7faBfa65De89b98C';
-// const wbnbAddress = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c';
-// const liquidityAddress = '0xf5D9b8947b11DdF5eE33374cC2865E775EBE00Dc';
-// const treasuryAddress = '0xa9c6d0cc785569b450393A69599E97fAED5D9dd9';
-// const insuranceAddress = '0x082D0FbCA3D80b2d4A05E20bFc227523bE8EFEF3';
+const firePitAddress = '0xaA32C984AfDfa6B95e88B8aB7faBfa65De89b98C';
+const wbnbAddress = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c';
+const liquidityAddress = '0xf5D9b8947b11DdF5eE33374cC2865E775EBE00Dc';
+const treasuryAddress = '0xa9c6d0cc785569b450393A69599E97fAED5D9dd9';
+const insuranceAddress = '0x082D0FbCA3D80b2d4A05E20bFc227523bE8EFEF3';
 
 const data = JSON.parse(json_dati);
 const regex = /^0x[a-fA-F0-9]{40}$/;
