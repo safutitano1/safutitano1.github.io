@@ -94,7 +94,8 @@ canvas{
 }
 
 .logo {
-    align-items: center;
+  
+    
 }
 
 .logo_icon{
@@ -102,7 +103,9 @@ canvas{
 }
 
 .logo_text{
-    width: 180px;
+    display: flex;
+    height: auto;
+    width: 30%;
 }
 
 .logo span {
@@ -159,6 +162,7 @@ canvas{
 }
 
 .number{
+    display: flex;
     opacity: 0.9;
     align-items: center;    
     font-size: 1.2rem;
