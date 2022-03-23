@@ -27,11 +27,11 @@ document.getElementById("menuButton").addEventListener("click", function(){
 });
 
 document.getElementById("calculator").addEventListener("click",function(){
-  document.getElementsByClassName("account")[0].classList.add("hide");
+  document.getElementsByClassName("account ")[0].classList.add("hide");
   document.getElementsByClassName("dashboard")[0].classList.add("hide");
   document.getElementsByClassName("calculator")[0].classList.remove("hide");
   document.getElementById("dashboard").classList.remove("selected");
-  document.getElementById("account").classList.remove("selected");
+  document.getElementById("account ").classList.remove("selected");
   document.getElementById("calculator").classList.add("selected");
 
   if(window.matchMedia('(max-width: 1040px)').matches){
@@ -40,11 +40,11 @@ document.getElementById("calculator").addEventListener("click",function(){
   }
 });
 
-document.getElementById("account").addEventListener("click",function(){
-  document.getElementsByClassName("account")[0].classList.remove("hide");
+document.getElementById("account ").addEventListener("click",function(){
+  document.getElementsByClassName("account ")[0].classList.remove("hide");
   document.getElementsByClassName("calculator")[0].classList.add("hide");
   document.getElementsByClassName("dashboard")[0].classList.add("hide");
-  document.getElementById("account").classList.add("selected");
+  document.getElementById("account ").classList.add("selected");
   document.getElementById("calculator").classList.remove("selected");
   document.getElementById("dashboard").classList.remove("selected");
   if(window.matchMedia('(max-width: 1040px)').matches){
@@ -54,12 +54,12 @@ document.getElementById("account").addEventListener("click",function(){
 });
 
 document.getElementById("dashboard").addEventListener("click",function(){
-  document.getElementsByClassName("account")[0].classList.add("hide");
+  document.getElementsByClassName("account ")[0].classList.add("hide");
   document.getElementsByClassName("calculator")[0].classList.add("hide");
   document.getElementsByClassName("dashboard")[0].classList.remove("hide");
   document.getElementById("dashboard").classList.add("selected");
   document.getElementById("calculator").classList.remove("selected");
-  document.getElementById("account").classList.remove("selected");
+  document.getElementById("account ").classList.remove("selected");
 
   if(window.matchMedia('(max-width: 1040px)').matches){
     console.log("match");

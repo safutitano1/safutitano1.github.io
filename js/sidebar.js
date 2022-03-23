@@ -1,5 +1,5 @@
 let open = false;
-
+document.getElementById("account").classList.add("selected");
 function openNav() {  
   if(window.matchMedia('(max-width: 780px)').matches){
     open = true;

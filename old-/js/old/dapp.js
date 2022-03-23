@@ -69,7 +69,7 @@ function init() {
   console.log("Web3Modal instance is", web3Modal);
 }
 /*Kick in the UI action after Web3modal dialog has chosen a provider*/
-async function fetchAccountData() {
+async function fetchaccount Data() {
 
   // Get a Web3 instance for the wallet
   const web3 = new Web3(provider);
@@ -84,15 +84,15 @@ async function fetchAccountData() {
   //const chainData = evmChains.getChain(chainId);
   //document.querySelector("#network-name").textContent = chainData.name;
 
-  // Get list of accounts of the connected wallet
-  const accounts = await web3.eth.getAccounts();
+  // Get list of account s of the connected wallet
+  const account s = await web3.eth.getaccount s();
 
-  // MetaMask does not give you all accounts, only the selected account
-  console.log("Got accounts", accounts);
-  window.userWalletAddress = accounts[0];
+  // MetaMask does not give you all account s, only the selected account 
+  console.log("Got account s", account s);
+  window.userWalletAddress = account s[0];
 
-  // Go through all accounts and get their ETH balance
-  const rowResolvers = accounts.map(async (address) => {
+  // Go through all account s and get their ETH balance
+  const rowResolvers = account s.map(async (address) => {
     const balance = await web3.eth.getBalance(address);
     // ethBalance is a BigNumber instance
 
@@ -107,34 +107,34 @@ async function fetchAccountData() {
     /*const clone = template.content.cloneNode(true);
     clone.querySelector(".address").textContent = address;
     clone.querySelector(".balance").textContent = humanFriendlyBalance;
-    accountContainer.appendChild(clone);*/
+    account Container.appendChild(clone);*/
   });
-  // Because rendering account does its own RPC commucation
+  // Because rendering account  does its own RPC commucation
   // with Ethereum node, we do not want to display any results
-  // until data for all accounts is loaded
+  // until data for all account s is loaded
   await Promise.all(rowResolvers);
   // Display fully loaded UI for wallet data
   document.querySelector("#prepare").style.display = "none";
   document.querySelector("#connected").style.display = "block";
 }
 /**
- * Fetch account data for UI when
- * - User switches accounts in wallet
+ * Fetch account  data for UI when
+ * - User switches account s in wallet
  * - User switches networks in wallet
  * - User connects wallet initially
  */
-async function refreshAccountData() {
+async function refreshaccount Data() {
   // If any current data is displayed when
   // the user is switching acounts in the wallet
   // immediate hide this data
   document.querySelector("#connected").style.display = "none";
   document.querySelector("#prepare").style.display = "block";
   // Disable button while UI is loading.
-  // fetchAccountData() will take a while as it communicates
+  // fetchaccount Data() will take a while as it communicates
   // with Ethereum node via JSON-RPC and loads chain data
   // over an API call.
   document.querySelector("#btn-connect").setAttribute("disabled", "disabled")
-  await fetchAccountData(provider);
+  await fetchaccount Data(provider);
   document.querySelector("#btn-connect").removeAttribute("disabled")
 }
 /*Connect wallet button pressed.*/
@@ -146,19 +146,19 @@ async function onConnect() {
     console.log("Could not get a wallet connection", e);
     return;
   }
-  // Subscribe to accounts change
-  provider.on("accountsChanged", (accounts) => {
-    fetchAccountData();
+  // Subscribe to account s change
+  provider.on("account sChanged", (account s) => {
+    fetchaccount Data();
   });
   // Subscribe to chainId change
   provider.on("chainChanged", (chainId) => {
-    fetchAccountData();
+    fetchaccount Data();
   });
   // Subscribe to networkId change
   provider.on("networkChanged", (networkId) => {
-    fetchAccountData();
+    fetchaccount Data();
   });
-  await refreshAccountData();
+  await refreshaccount Data();
 }
 /*Disconnect wallet button pressed.*/
 async function onDisconnect() {
@@ -195,10 +195,10 @@ async function getMarketCap() {
     document.getElementById("input_price").value = Number(priceJson.data.price).toFixed(2);
     Promise.all([
         fetch('https://api.bscscan.com/api?module=stats&action=tokensupply&contractaddress=0x84952dd90cdc57170b13d2291a8afcedc8f97c71&apikey=CQMXE3Z94YNSY2HMF6IJVTVWMW5Z9DCH9A'),
-        fetch('https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=0x84952dd90cdC57170b13D2291A8afCEdC8F97c71&address=0x4D69f806EA93222474cd82750BCcCB5ecBcb5A7b&tag=latest&apikey=CQMXE3Z94YNSY2HMF6IJVTVWMW5Z9DCH9A'),
-        fetch('https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c&address=0x690Dd96cf30B4B0773F763dd7627F7C365C57BdF&tag=latest&apikey=CQMXE3Z94YNSY2HMF6IJVTVWMW5Z9DCH9A'),
+        fetch('https://api.bscscan.com/api?module=account &action=tokenbalance&contractaddress=0x84952dd90cdC57170b13D2291A8afCEdC8F97c71&address=0x4D69f806EA93222474cd82750BCcCB5ecBcb5A7b&tag=latest&apikey=CQMXE3Z94YNSY2HMF6IJVTVWMW5Z9DCH9A'),
+        fetch('https://api.bscscan.com/api?module=account &action=tokenbalance&contractaddress=0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c&address=0x690Dd96cf30B4B0773F763dd7627F7C365C57BdF&tag=latest&apikey=CQMXE3Z94YNSY2HMF6IJVTVWMW5Z9DCH9A'),
         fetch('https://api.pancakeswap.info/api/v2/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'),
-        fetch('https://api.bscscan.com/api?module=account&action=balancemulti&address=0x0fa39Ea67Fa2bFF4d3581c1EE83269fdA6C422a1,0x9c5345a3C7B5fab558eE1ed2779D3c3d3942C639&tag=latest&apikey=CQMXE3Z94YNSY2HMF6IJVTVWMW5Z9DCH9A'),
+        fetch('https://api.bscscan.com/api?module=account &action=balancemulti&address=0x0fa39Ea67Fa2bFF4d3581c1EE83269fdA6C422a1,0x9c5345a3C7B5fab558eE1ed2779D3c3d3942C639&tag=latest&apikey=CQMXE3Z94YNSY2HMF6IJVTVWMW5Z9DCH9A'),
         fetch('js/data/busdTreasury.json'),
         fetch('js/data/busdInsurance.json'),
         fetch('js/data/unicrypt.json')
@@ -313,7 +313,7 @@ var x = setInterval(function() {
 }, 1000);
 
 async function getBalanceFromAddress(wallet){
-    const apiCall = await fetch("https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress="+ tokenAddress + "&address=" + wallet +"&tag=latest&apikey="+ apiKey);
+    const apiCall = await fetch("https://api.bscscan.com/api?module=account &action=tokenbalance&contractaddress="+ tokenAddress + "&address=" + wallet +"&tag=latest&apikey="+ apiKey);
     const balanceJson = await apiCall.json();  
     document.getElementById("input").value = (balanceJson.result / Math.pow(10, decimals)).toFixed(3);
     document.getElementById("balance").innerHTML = (balanceJson.result / Math.pow(10, decimals)).toFixed(3);

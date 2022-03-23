@@ -42,7 +42,7 @@ canvas{
 .logo,
 .wallet,
 .content,
-.account,
+.account ,
 .calculator {
     display: flex;
 }
@@ -88,7 +88,7 @@ canvas{
     z-index: 100;
 }
 
-.account {
+.account  {
     flex-direction: column;
     width: 50vw;
 }
@@ -613,7 +613,7 @@ input[type=range].styled-slider {
     color: #11aca4;
 }
 
-#dashboard:hover,#calculator:hover,#account:hover{
+#dashboard:hover,#calculator:hover,#account :hover{
     cursor: pointer;
 }
 
@@ -744,7 +744,7 @@ input[type=range].styled-slider {
     .individual_group{
         padding: 10px 0px 10px 0px;
     }
-    .account{
+    .account {
         width: auto;
     }
     .row{

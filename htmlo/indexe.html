@@ -14,15 +14,17 @@
 <body>    
     <div class="main">                       
         <div class="header">
-            <!-- <input id="menuButton" type="image" src="media/menu_add.svg"> -->
+             <input id="menuButton" type="image" src="media/menu_add.svg">
             <a href="https://safutitano.com">
-                <!-- <div class="logo">
+                <div class="logo">
                     <img src="media/logo_text.png" class="logo_text">
-                </div> -->
+                </div>
             </a>
-            <div class="wallet">                
+
+
+            <div class="wallet">                 
                 <div id="prepare">
-                    <button class="btn btn-primary" id="btn-connect">
+                    <button class="btn btn-primary" id="btn-connect" >
                       Connect wallet
                     </button>
                   </div>        
@@ -32,48 +34,42 @@
                     </button>
                   </div>
             </div>
+
         </div>
-        <!-- <div class="wrap_content">
-            <div id="sidebar" class="glass"> -->
-                <!-- <ul id="pageList">
+        <div class="wrap_content">
+            <div id="sidebar" class="glass"> 
+                 <ul id="pageList">
                     <li><a href="https://safutitano.com" class="contentLink"><img src="media/home.png" class="blacktoblue">Home</a></li>
-                    <li><a id="dashboard" class="contentLink selected"><img src="media/lock.png" class="blacktoblue">dashboard</a></li>
-                    <li><a id="account " class="contentLink"><img src="media/account .png" class="blacktoblue">account </a></li>
+                    <li><a id="dashboard" class="contentLink selected"><img src="media/lock.png" class="blacktoblue">Dashboard</a></li>
+                    <li><a id="account" class="contentLink"><img src="media/account.png" class="blacktoblue">Account</a></li>
                     <li><a id="calculator" class="contentLink"><img src="media/calculator.png" class="blacktoblue">Calculator</a></li>
-                    <!-- <li><a href="https://app.bogged.finance/bsc/swap?tokenIn=BNB&tokenOut=0x84952dd90cdc57170b13d2291a8afcedc8f97c71" class="contentLink"><img src="media/swap.png" class="blacktoblue">Swap</a></li>
+                    <li><a href="https://app.bogged.finance/bsc/swap?tokenIn=BNB&tokenOut=0x84952dd90cdc57170b13d2291a8afcedc8f97c71" class="contentLink"><img src="media/swap.png" class="blacktoblue">Swap</a></li>
                     <li><a href="https://safutitano.gitbook.io/safu-titano/" class="contentLink"><img src="media/whitepaper.png" class="blacktoblue">Whitepaper</a></li> -->
-                <!-- </ul>   -->
-
-
-
-
-                <!-- <div id="mySidebar" class="sidebar">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
-                    <a id="dashboard" class="contentLink selected"><img src="media/lock.png" class="blacktoblue">dashboard</a>
-                    <a id="account " class="contentLink"><img src="media/account .png" class="blacktoblue">account </a>
+                 </ul>  
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">XC</a>
+                    <a id="dashboard" class="contentLink selected"><img src="media/lock.png" class="blacktoblue">Dashboard</a>
+                    <a id="account" class="contentLink"><img src="media/account.png" class="blacktoblue">Account</a>
                     <a id="calculator" class="contentLink"><img src="media/calculator.png" class="blacktoblue">Calculator</a>
 
                   </div>
                   
                   <div id="main">
-                    <button class="openbtn" onclick="openNav()">Sidebar</button>   -->
-
-
-
+                     <button class="openbtn" onclick="openNav()">Sidebar</button>   
                   
                     
                   </div>
             </div>
             <div class="content">
-                <div class="dashboard"> 
-                    <div class="group glass">
+                 <div class="dashboard"> 
+                    <div class="group glass"> 
                         <div class="dashboard_row">
                             <div class="entry">
                                 <div class="text">SAFTI Price</div> 
                                 <div class="number big" id="price"></div>
                             </div>                        
                             <div class="entry">
-                                <div class="text">Market Cap</div>
+                                 <div class="text">Market Cap</div>
                                 <div class="number big" id="marketcap"></div>
                             </div>
                             <div class="entry">
@@ -85,19 +81,19 @@
                             <div class="entry">
                                 <div class="text">Backed Liquidity</div>
                                 <div class="number big" id="backedliquidity"> 100%</div>
-                            </div>
-                            <div class="entry">
+                            </div> 
+                             <div class="entry">
                                 <div class="text">Next Rebase</div>
                                 <div class="number big">
                                     <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
                                 </div>
-                            </div>
+                            </div> 
                             <div class="entry">
                                 <div class="text">Total Supply</div>
                                 <div class="number big" id="totalsupply"></div>
                             </div>
                         </div>
-                    </div>                    
+                    </div>                     
                     <div class="dashboard_row">
                         <div class="entry individual_group glass">
                             <div class="text">SAFTI Price</div> 
@@ -107,8 +103,8 @@
                             <div class="text">Market Value of Treasury Asset</div>
                             <div class="number big" id="treasury"></div>
                         </div>
-                    </div>   
-                    <div class="dashboard_row">
+                    </div>    
+                     <div class="dashboard_row">
                         <div class="entry individual_group glass">
                             <div class="text">BNB Liquidity Value</div>
                             <div class="number big" id="pool"></div>
@@ -117,23 +113,23 @@
                             <div class="text">TOKEN Insurance Fund Value</div>
                             <div class="number big" id="insurance"></div>
                         </div>
-                    </div>
-                    <div class="dashboard_row group glass">
+                    </div> 
+                     <div class="dashboard_row group glass">
                         <div class="entry">
-                            <div class="text"># Value of FirePit</div>
+                            <div class="text"># Value of Supply</div>
                             <div class="number big" id="firepit"></div>
                         </div>
                         <div class="entry">
-                            <div class="text">$ Value of FirePit</div>
+                            <div class="text">$ Value of Supply</div>
                             <div class="number big" id="firepitvalue"></div>
                         </div>
                         <div class="entry">
-                            <div class="text">% FirePit Supply</div>
+                            <div class="text">% Supply Control</div>
                             <div class="number big" id="firepitsupply"></div>
                         </div>
                     </div> 
-                </div>
-                <div class="account  hide">                        
+                </div> 
+                 <div class="account hide">                      
                     <div class="wrapper_left">
                             <div class="bottom_statistics">
                                 <div class="dashboard_row">
